@@ -1,0 +1,22 @@
+[project]
+name = "guitaredit"
+version = "0.1.0"
+description = "Learn a guitar DI editing style from Pro Tools sessions"
+requires-python = ">=3.10"
+dependencies = ["numpy", "soundfile"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+guitaredit = "guitaredit.__main__:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["guitaredit"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
